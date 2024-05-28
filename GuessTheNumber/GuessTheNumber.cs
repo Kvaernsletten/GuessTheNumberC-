@@ -17,7 +17,7 @@ namespace kvaernsletten
         {
             GenerateNumbers();
             Console.WriteLine(randomNumber);
-            Console.WriteLine("I have generated a number between 1 and 100, guess which number it is by typing below: ");
+            Console.WriteLine("I have generated a number between 1 and 100, guess which number it is by typing below and press ENTER to confirm");
             Guess();
         }
 
@@ -45,12 +45,14 @@ namespace kvaernsletten
                 else if (guessedNumber < randomNumber)
                 {
                     Console.WriteLine("Wrong! Your number is too low!");
+                    Console.WriteLine("Guess again!");
                     attempts++;
                     Guess();
                 }
                 else if (guessedNumber > randomNumber)
                 {
                     Console.WriteLine("Wrong! Your number is too high!");
+                    Console.WriteLine("Guess again!");
                     attempts++;
                     Guess();
                 }
@@ -62,7 +64,7 @@ namespace kvaernsletten
             attempts = 0;
             Console.Clear();
             GenerateNumbers();
-            Console.WriteLine("I have generated a number between 1 and 100, guess which number it is by typing below: ");
+            Console.WriteLine("I have generated a number between 1 and 100, guess which number it is by typing below and press ENTER to confirm");
             Guess();
         }
     }
